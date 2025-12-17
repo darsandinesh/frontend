@@ -1,11 +1,8 @@
 import { useForm, Controller } from "react-hook-form";
 import AppCard from "../../components/AppCard";
 import AppButton from "../../components/AppButton";
-import { loginBuyer } from "../../Api/buyerApi";
 import type { FieldError } from "react-hook-form";
-import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { setLoginCredentials } from "../../store/slices/authSlice";
 import { useNavigate } from "react-router-dom";
 import { PAGE_URL } from "../../utils/constants/routes";
 
@@ -15,9 +12,6 @@ type BuyerLoginValues = {
   rememberMe: boolean;
 };
 
-const headers = {
-  "Content-Type": "application/json",
-};
 
 export default function BuyerLogin() {
   const navigate = useNavigate();
@@ -34,30 +28,9 @@ export default function BuyerLogin() {
     },
   });
 
-  const dispatch = useDispatch();
 
-  const onSubmit = async (values: BuyerLoginValues) => {
+  const onSubmit = async () => {
     try {
-      // const res = await loginBuyer(
-      //   {
-      //     email: values.email,
-      //     password: values.password,
-      //   },
-      //   headers,
-      // );
-
-      // if (res.success) {
-      //   dispatch(
-      //     setLoginCredentials({
-      //       accessToken: res.accessToken,
-      //       refreshToken: res.refreshToken,
-      //       user: res.user,
-      //     }),
-      //   );
-      //   toast.success("Login successful.");
-      // } else {
-      //   toast.error(res.message ?? "Login failed.");
-      // }
       navigate('/buyer/dashboard');
     } catch {
       toast.error("Login failed. Please try again.");

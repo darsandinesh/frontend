@@ -1,7 +1,6 @@
 import { useForm, Controller } from "react-hook-form";
 import AppCard from "../../components/AppCard";
 import AppButton from "../../components/AppButton";
-import { loginFarmer } from "../../Api/FarmerApi";
 import type { FieldError } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { PAGE_URL } from "../../utils/constants/routes";
@@ -27,18 +26,8 @@ export default function FarmerLogin() {
     },
   });
 
-  const onSubmit = async (values: FarmerLoginValues) => {
+  const onSubmit = async () => {
     try {
-      // const res = await loginFarmer({
-      //   email: values.email,
-      //   password: values.password,
-      // });
-
-      // if (res.success) {
-      //   alert("Farmer login successful!");
-      // } else {
-      //   alert(res.message ?? "Login failed.");
-      // }
       navigate('/farmer/dashboard');
     } catch {
       alert("Login failed. Please try again.");

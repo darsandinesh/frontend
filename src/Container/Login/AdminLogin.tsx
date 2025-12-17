@@ -2,7 +2,6 @@ import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import AppCard from "../../components/AppCard";
 import AppButton from "../../components/AppButton";
-import { loginAdmin } from "../../Api/adminApi";
 import type { FieldError } from "react-hook-form";
 
 type AdminLoginValues = {
@@ -25,18 +24,8 @@ export default function AdminLogin() {
 
   const navigate = useNavigate();
 
-  const onSubmit = async (values: AdminLoginValues) => {
+  const onSubmit = async () => {
     try {
-      // const res = await loginAdmin({
-      //   email: values.email,
-      //   password: values.password,
-      // });
-
-      // if (res.success) {
-      //   navigate("/admin/dashboard");
-      // } else {
-      //   alert(res.message ?? "Login failed. Please try again.");
-      // }
       navigate("/admin/dashboard");
     } catch {
       alert("Login failed. Please try again.");
