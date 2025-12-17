@@ -183,7 +183,7 @@ export default function AdminProfile() {
                                         <input type="password" className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white" />
                                     </div>
                                     <div className="pt-4">
-                                        <AppButton type="primary" danger>
+                                        <AppButton type="primary">
                                             Update Password
                                         </AppButton>
                                     </div>

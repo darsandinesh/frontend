@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AppCard from "../../components/AppCard";
 import AppButton from "../../components/AppButton";
 
 const ClientDetails = () => {
     const { type, id } = useParams();
-    const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState<"profile" | "transactions" | "requests">("profile");
 
     return (

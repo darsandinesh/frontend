@@ -1,6 +1,5 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import AppCard from "../../components/AppCard";
-import AppButton from "../../components/AppButton";
 
 const RequestDetails = () => {
     const navigate = useNavigate();
@@ -67,7 +66,7 @@ const RequestDetails = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Left Column: Personal / Company Info */}
                 <div className="lg:col-span-2 space-y-6">
-                    <AppCard title={type === 'farmer' ? "Personal Information" : "Company Information"}>
+                    <AppCard >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Full Name / Company Name</label>
@@ -100,7 +99,7 @@ const RequestDetails = () => {
                         </div>
                     </AppCard>
 
-                    <AppCard title="Bank Details">
+                    <AppCard >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Bank Name</label>
@@ -118,7 +117,7 @@ const RequestDetails = () => {
                     </AppCard>
 
                     {type === 'farmer' && (
-                        <AppCard title="Farm Details">
+                        <AppCard >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Farm Size</label>
@@ -139,7 +138,7 @@ const RequestDetails = () => {
 
                 {/* Right Column: Documents */}
                 <div className="lg:col-span-1 space-y-6">
-                    <AppCard title="KYC Documents">
+                    <AppCard >
                         <div className="space-y-4">
                             <div className="p-4 border border-gray-100 rounded-xl bg-gray-50/50">
                                 <div className="flex items-center justify-between mb-2">

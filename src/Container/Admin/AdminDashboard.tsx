@@ -1,5 +1,5 @@
 import AppCard from "../../components/AppCard";
-import { AreaChart, Area, ResponsiveContainer, Tooltip } from 'recharts';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 const AdminDashboard = () => {
     // Mock data for tiny sparkline charts
