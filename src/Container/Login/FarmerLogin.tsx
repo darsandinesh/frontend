@@ -29,16 +29,17 @@ export default function FarmerLogin() {
 
   const onSubmit = async (values: FarmerLoginValues) => {
     try {
-      const res = await loginFarmer({
-        email: values.email,
-        password: values.password,
-      });
+      // const res = await loginFarmer({
+      //   email: values.email,
+      //   password: values.password,
+      // });
 
-      if (res.success) {
-        alert("Farmer login successful!");
-      } else {
-        alert(res.message ?? "Login failed.");
-      }
+      // if (res.success) {
+      //   alert("Farmer login successful!");
+      // } else {
+      //   alert(res.message ?? "Login failed.");
+      // }
+      navigate('/farmer/dashboard');
     } catch {
       alert("Login failed. Please try again.");
     }
